@@ -1,3 +1,10 @@
-// Write TypeScript code!
-const appDiv: HTMLElement = document.getElementById('app');
-appDiv.innerHTML = `<h1>TypeScript Starter</h1>`;
+import { declaration_vs_assertion } from './declaration_vs_assertion/declaration_vs_assertion';
+import { types } from './types/types';
+
+console.log('hola');
+
+// Types in typescript
+types();
+
+// Declaration vs assertion
+declaration_vs_assertion();

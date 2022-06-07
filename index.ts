@@ -1,6 +1,6 @@
-import { declaration_vs_assertion } from './declaration_vs_assertion/declaration_vs_assertion';
+import { declaration_vs_assertion } from './declaration-vs-assertion/declaration-vs-assertion';
 import { types } from './types/types';
-import { any_type } from './any_type/any_type';
+import { any_type } from './any-type/any-type';
 
 // Types in typescript
 types();

@@ -1,4 +1,4 @@
-export function any_type() {
+export function anyType() {
   let any;
   any = 'this is a string';
   console.log(`Value: ${any} Type: ${typeof any}`);

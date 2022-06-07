@@ -20,7 +20,7 @@ class Person {
   }
 }
 
-export function check_variable_matches_type() {
+export function checkVariableMatchesType() {
   const animal1: Animal = {
     age: 1,
     isAlive: true,

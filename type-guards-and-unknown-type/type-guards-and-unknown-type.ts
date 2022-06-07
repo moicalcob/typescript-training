@@ -13,7 +13,7 @@ function checkWrongType() {
 function unknownType() {
   const parsedJSON: unknown = JSON.parse("false")
 
-  // const isValid: boolean = parsedJSON;
+  // const isValid: boolean = parsedJSON; // 🔴 Error
 
   if (typeof parsedJSON !== "boolean") {
     console.log("parsedJSON is not boolean");
@@ -24,6 +24,10 @@ function unknownType() {
   console.log(`parsedJSON is boolean and isValid2 is ${isValid2}`);
 
   const parsedJSON2: unknown = JSON.parse("[1,2,3]");
+
+  // const sum = parsedJSON2.reduce((acc, curr) => {
+  //   return acc + curr;
+  // }) // 🔴 Error
 
   if (!Array.isArray(parsedJSON2)) {
     console.log("parsedJSON2 is not an array");
@@ -84,7 +88,8 @@ function zodExample() {
     })
   });
 
-  HttpResponse.parse(JSON.parse('{"status":200,"body":{"id":"1","name":"John Doe","email":"jhondoe@gmail.com"}}'));
+  HttpResponse.parse(JSON.parse('{"status":200,"body":{"id":"1","name":"John Doe","email":"jhondoe@gmail.com"}}')); // ✅ OK
+  HttpResponse.parse(JSON.parse('{"status":200,"body":{"name":"John Doe","email":"jhondoe@gmail.com"}}')); // 🔴 Error
 
   // extract the inferred type
   type HttpResponse = z.infer<typeof HttpResponse>;

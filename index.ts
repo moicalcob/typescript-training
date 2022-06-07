@@ -3,6 +3,7 @@ import { types } from './types/types';
 import { anyType } from './any-type/any-type';
 import { checkVariableMatchesType } from './check-variable-matches-type/check-variable-matches-type';
 import { typeGuardsAndUnknownType } from './type-guards-and-unknown-type/type-guards-and-unknown-type';
+import { duckTypingAndStructuralTyping } from './duck-typing-and-structural-typing/duck-typing-and-structural-typing';
 
 // Types in typescript
 //types();
@@ -21,4 +22,7 @@ import { typeGuardsAndUnknownType } from './type-guards-and-unknown-type/type-gu
 // checkVariableMatchesType();
 
 // Type guards and the "unknown" type
-typeGuardsAndUnknownType();
+//typeGuardsAndUnknownType();
+
+// Duck typing and structural typing
+duckTypingAndStructuralTyping();

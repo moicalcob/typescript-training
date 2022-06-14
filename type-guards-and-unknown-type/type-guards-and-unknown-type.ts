@@ -79,6 +79,7 @@ function usingTypeGuards() {
 
 // Zod example
 
+// https://github.com/colinhacks/zod
 function zodExample() {
   const HttpResponse = z.object({
     status: z.number(),
@@ -101,7 +102,7 @@ export function typeGuardsAndUnknownType() {
 
   // unknownType();
 
-  usingTypeGuards();
+  // usingTypeGuards();
 
-  // zodExample();
+  zodExample();
 }

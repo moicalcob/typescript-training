@@ -1,24 +1,20 @@
+// Javascript
 
-const myName: string = 'Cristo'
-
-
-type Person = {
-  name: string,
-  age: number,
-  height?: number
+function greet1(who) {
+  console.log('Hello', who)
 }
-const me: Person = { name: myName, age: 28 }
+
+const name1 = 'Cristo'
+
+greet1(name1)
 
 
-type HumanWorker = Person & {
-  occupation: string
+// Typescript
+
+function greet2(who: string) {
+  console.log('Hello', who)
 }
-const plumber: HumanWorker = { name: 'Mario', age: 99, height: 150, occupation: 'Plumber' }
 
+const name2: string = 'Cristo'
 
-const list: HumanWorker[] = [plumber]
-
-
-function getAge(person: Person): number {
-  return person.age
-}
+greet2(name2)

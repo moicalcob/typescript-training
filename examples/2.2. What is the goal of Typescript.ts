@@ -17,4 +17,4 @@ for (const state of states) {
 
 const names: string[] = ['Miguel', 'Daniel']
 
-console.log(names[2].toUpperCase()) // ERROR: Cannot read properties of undefined (reading 'toUpperCase')
+console.log(names[2].toUpperCase()) // TypeError: Cannot read property 'toUpperCase' to undefined

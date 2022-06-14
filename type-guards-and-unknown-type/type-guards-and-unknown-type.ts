@@ -53,6 +53,7 @@ type HTTPResponse = {
 function isHttpResponse(parsedJSON: any): parsedJSON is HTTPResponse {
   return typeof parsedJSON === "object" &&
     "status" in parsedJSON &&
+    typeof parsedJSON.status === "number" &&
     "body" in parsedJSON &&
     typeof parsedJSON.body === 'object' &&
     "id" in parsedJSON.body &&
@@ -61,7 +62,7 @@ function isHttpResponse(parsedJSON: any): parsedJSON is HTTPResponse {
 }
 
 function usingTypeGuards() {
-  const parsedJSON: unknown = JSON.parse('{"status":"200","body":{"id":"1","name":"John Doe","email":"jhon@gmail.com"}}')
+  const parsedJSON: unknown = JSON.parse('{"status": 200,"body":{"id":"1","name":"John Doe","email":"jhon@gmail.com"}}')
 
   if (!isHttpResponse(parsedJSON)) {
     console.log("parsedJSON is not a HTTPResponse");
@@ -100,7 +101,7 @@ export function typeGuardsAndUnknownType() {
 
   // unknownType();
 
-  // usingTypeGuards();
+  usingTypeGuards();
 
   // zodExample();
 }

@@ -78,11 +78,21 @@ function implementingTypeAndInterface() {
   class SomeCar implements Car {
     wheels: number
     color: string
+
+    constructor(wheels: number, color: string) {
+      this.wheels = wheels
+      this.color = color
+    }
   }
 
   class SomeTruck implements Truck {
     wheels: number
     color: string
+
+    constructor(wheels: number, color: string) {
+      this.wheels = wheels
+      this.color = color
+    }
   }
 
   type PartialTruck = { wheels: number } | { color: number }

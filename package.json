@@ -4,5 +4,8 @@
   "private": true,
   "dependencies": {
     "zod": "^3.17.3"
+  },
+  "devDependencies": {
+    "@types/node": "^17.0.42"
   }
 }

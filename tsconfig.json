@@ -3,6 +3,7 @@
     "target": "esnext",
     "noImplicitAny": true,
     "moduleResolution": "node",
+    "strict": true,
     "lib": ["dom", "es2017"]
   }
 }

@@ -45,11 +45,11 @@ function playingWithTypes() {
 
   // union
   type PartialPoint = PartialPointX | PartialPointY
-  const partialPoint1 = {
+  const partialPoint1: PartialPoint = {
     x: 1,
   }
 
-  const partialPoing2 = {
+  const partialPoing2: PartialPoint = {
     y: 2,
   }
 
@@ -94,6 +94,6 @@ function implementingTypeAndInterface() {
 
 export function typeVsInterface() {
   mergingInterfaces()
-  playingWithTypes()
-  implementingTypeAndInterface()
+  // playingWithTypes()
+  // implementingTypeAndInterface()
 }

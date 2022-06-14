@@ -90,8 +90,10 @@ function zodExample() {
     })
   });
 
-  HttpResponse.parse(JSON.parse('{"status":200,"body":{"id":"1","name":"John Doe","email":"jhondoe@gmail.com"}}')); // ✅ OK
-  HttpResponse.parse(JSON.parse('{"status":200,"body":{"name":"John Doe","email":"jhondoe@gmail.com"}}')); // 🔴 Error
+  const response = HttpResponse.parse(JSON.parse('{"status":200,"body":{"id":"1","name":"John Doe","email":"jhondoe@gmail.com"}}')); // ✅ OK
+  // HttpResponse.parse(JSON.parse('{"status":200,"body":{"name":"John Doe","email":"jhondoe@gmail.com"}}')); // 🔴 Error
+
+  console.log('Http response parsed correctly!: ', response)
 
   // extract the inferred type
   type HttpResponse = z.infer<typeof HttpResponse>;
@@ -104,5 +106,5 @@ export function typeGuardsAndUnknownType() {
 
   // usingTypeGuards();
 
-  zodExample();
+  // zodExample();
 }
